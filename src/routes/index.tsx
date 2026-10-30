@@ -97,7 +97,7 @@ function Index() {
 
       <div className="info-marquee" aria-label="Áreas de atendimento"><div className="marquee-track">{[1,2].map(n=><div className="marquee-group" key={n}><span>✦ FERIDAS AGUDAS E CRÔNICAS</span><span>✦ PÉ DIABÉTICO</span><span>✦ CURATIVOS ESPECIALIZADOS</span><span>✦ LESÕES POR PRESSÃO</span><span>✦ ÚLCERAS VASCULARES</span><span>✦ ATENDIMENTO NA RESIDÊNCIA</span><span>✦ MEDICAÇÕES CONFORME PRESCRIÇÃO</span><span>✦ CUIDADO INDIVIDUALIZADO</span></div>)}</div></div>
 
-      <section className="section intro-section" id="sobre"><div className="container intro-grid"><div className="intro-illustration maria-profile-photo photo-placeholder" role="img" aria-label="Espaço reservado para foto de Fátima"><span>FOTO</span><small>Imagem de Fátima</small></div><div className="intro-copy"><span className="eyebrow">PRAZER, SOU FÁTIMA</span><h2>Cuidado de enfermagem no conforto da sua <em>residência.</em></h2><p>A Clínica Naamã oferece atendimento domiciliar para quem precisa de cuidados de enfermagem sem sair de casa. Cada visita é planejada de acordo com a necessidade da pessoa, com avaliação, curativos especializados e acompanhamento da evolução.</p><p>Também é possível realizar a administração de medicações na residência, sempre conforme prescrição e avaliação profissional, com cuidado, atenção e orientação à família.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o atendimento de enfermagem")}><MessageCircle size={18}/> conhecer o atendimento</button></div></div></section>
+      <section className="section intro-section" id="sobre"><div className="container intro-grid"><div className="intro-illustration maria-profile-photo"><img src={fatimaAtendimento.url} alt="Fátima realizando curativo domiciliar em paciente" loading="lazy"/></div><div className="intro-copy"><span className="eyebrow">PRAZER, SOU FÁTIMA</span><h2>Cuidado de enfermagem no conforto da sua <em>residência.</em></h2><p>A Clínica Naamã oferece atendimento domiciliar para quem precisa de cuidados de enfermagem sem sair de casa. Cada visita é planejada de acordo com a necessidade da pessoa, com avaliação, curativos especializados e acompanhamento da evolução.</p><p>Também é possível realizar a administração de medicações na residência, sempre conforme prescrição e avaliação profissional, com cuidado, atenção e orientação à família.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o atendimento de enfermagem")}><MessageCircle size={18}/> conhecer o atendimento</button></div></div></section>
 
       <section className="section pain-section"><div className="container narrow center"><span className="eyebrow">QUANDO PROCURAR APOIO</span><h2>Feridas persistentes e alterações nos pés merecem <em>atenção especializada.</em></h2><p>Feridas que não cicatrizam, lesões nos pés de pessoas com diabetes e alterações na pele precisam de atenção. A avaliação profissional ajuda a orientar o cuidado e identificar quando é necessário encaminhamento ou atuação conjunta com outros profissionais.</p><div className="check-list centered-list"><div><Check size={17}/><span>Você ou alguém da família precisa de cuidado para uma ferida aguda ou crônica.</span></div><div><Check size={17}/><span>Você tem diabetes e percebeu uma lesão, fissura ou alteração nos pés.</span></div><div><Check size={17}/><span>A ferida persiste, apresenta mudanças ou precisa de curativos especializados.</span></div></div><button className="btn btn-primary" onClick={() => goWhatsapp("tirar dúvidas sobre o cuidado de uma ferida")}><MessageCircle size={18}/> Quero tirar minhas dúvidas</button></div></section>
 
@@ -139,7 +139,22 @@ function Index() {
           <div className="before-after-grid">
             {beforeAfterCases.map((item) => (
               <article className={`before-after-card ba-${item.slot}`} key={item.title}>
-                {item.single ? (
+                {item.stages ? (
+                  <>
+                    <div className="before-after-images ba-stages">
+                      {item.stages.map((s, i) => (
+                        <div className="before-after-photo" key={i}>
+                          <span className={s.after ? "before-after-label after-label" : "before-after-label"}>{i + 1}. {s.label}</span>
+                          <img src={s.src} alt={`${item.title} — etapa ${i + 1}`} loading="lazy" />
+                        </div>
+                      ))}
+                    </div>
+                    <div className="before-after-card-copy">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                  </>
+                ) : item.single ? (
                   <div className="before-after-stack">
                     <div className="before-after-photo before-after-full" style={item.aspect ? { aspectRatio: item.aspect } : undefined}>
                       <img src={item.single} alt={`Registro de acompanhamento: ${item.title}`} loading="lazy" />
