@@ -473,9 +473,9 @@ body,.jt-site{color:#0b4168;background:#fff}
 .before-after-card{overflow:hidden;background:#fff;border:1px solid #dbe7eb;border-radius:22px;box-shadow:0 12px 30px rgba(11,65,104,.07);text-align:left}
 .before-after-images{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#dbe7eb}
 .ba-pair-a{grid-column:1;grid-row:1}
-.ba-pair-b{grid-column:1;grid-row:2}
-.ba-tall{grid-column:2;grid-row:1/span 2}
-.ba-feature{grid-column:1/span 2;grid-row:3;justify-self:center;width:100%;max-width:820px}
+.ba-pair-b{grid-column:2;grid-row:1}
+.ba-tall{grid-column:1;grid-row:2}
+.ba-feature{grid-column:2;grid-row:2;justify-self:stretch;width:100%;max-width:none}
 .before-after-stack{display:grid;justify-content:center;justify-items:center;gap:18px;padding:18px}
 .ba-tall .before-after-stack{grid-template-columns:minmax(0,440px)}
 .ba-feature .before-after-stack{grid-template-columns:minmax(0,640px)}
