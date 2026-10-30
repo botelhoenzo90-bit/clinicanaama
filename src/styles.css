@@ -761,3 +761,8 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 .home-care-icon{display:inline-grid;place-items:center;width:58px;height:58px;border-radius:50%;background:#fff;font-size:28px}
 .home-care-section .btn-primary{background:#fff;color:#0b4168}
 @media(max-width:760px){.home-care-grid{grid-template-columns:1fr}}
+.home-care-section .eyebrow,.home-care-section h2 em{color:#bff3f0!important}
+.home-care-section .eyebrow::before{background:#bff3f0!important}
+.home-care-section .btn.btn-primary{background:#fff!important;color:#0b4168!important}
+#sobre .maria-profile-photo{min-height:460px}
+#sobre .maria-profile-photo img{object-position:center 20%}
