@@ -49,10 +49,8 @@ const faqs = [
 
 type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "tall" | "feature"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean };
 const beforeAfterCases: BeforeAfterCase[] = [
-  { slot: "pair-a", title: "Úlcera em calcanhar", description: "Acompanhamento da evolução da lesão no calcanhar, com cuidados especializados e registros das etapas de cicatrização.", before: ulceraCalcanharAntes.url, after: ulceraCalcanharDepois.url },
-  { slot: "pair-b", title: "Ferida profunda em coto", description: "Evolução de uma ferida profunda em coto de amputação, acompanhada com desbridamento e curativos especializados.", before: ulceraCotoAntes.url, after: ulceraCotoDepois.url },
-  { slot: "tall", title: "Acompanhamento de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida aberta; à direita, a mesma área com a lesão praticamente fechada.", single: cotoAmputacaoRegistro.url, aspect: "900/1600", panels: true },
-  { slot: "feature", title: "Cicatrização de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida com tecido desvitalizado; à direita, a mesma área em fase de cicatrização.", single: cotoAmputacaoAntesDepois.url, aspect: "828/739" },
+  { slot: "pair-a", title: "Úlcera em calcanhar", description: "O acompanhamento especializado permitiu observar a evolução da lesão no calcanhar e seu processo de cicatrização.", before: ulceraCalcanharAntes.url, after: ulceraCalcanharDepois.url },
+  { slot: "pair-b", title: "Ferida profunda em coto", description: "Com acompanhamento, desbridamento e curativos especializados, foi possível observar a evolução da ferida profunda em coto de amputação.", before: ulceraCotoAntes.url, after: ulceraCotoDepois.url },
 ];
 
 function Index() {
