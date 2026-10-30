@@ -50,7 +50,7 @@ const faqs = [
 
 type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "tall" | "feature" | "evolution"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; stages?: { label: string; src: string; after?: boolean }[] };
 const beforeAfterCases: BeforeAfterCase[] = [
-  { slot: "evolution", title: "Evolução de uma ferida em coto de amputação", description: "Acompanhamento de um mesmo caso, etapa por etapa: a ferida profunda, com tecido desvitalizado, passou por desbridamento e curativos especializados, formou tecido de granulação e evoluiu até o fechamento, com a cicatriz no lugar da lesão. Cada etapa mostra como o cuidado contínuo faz diferença.", stages: [
+  { slot: "evolution", title: "Evolução de uma ferida no calcanhar", description: "Acompanhamento de um mesmo caso, etapa por etapa: a ferida profunda no calcanhar, com tecido desvitalizado, passou por desbridamento e curativos especializados, formou tecido de granulação e evoluiu até o fechamento, com a cicatriz no lugar da lesão. Cada etapa mostra como o cuidado contínuo faz diferença.", stages: [
     { label: "ANTES", src: ulceraCotoAntes.url },
     { label: "EVOLUÇÃO", src: ulceraCotoDepois.url },
     { label: "EVOLUÇÃO", src: ulceraCalcanharAntes.url, after: true },
