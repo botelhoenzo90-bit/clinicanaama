@@ -49,8 +49,10 @@ const faqs = [
 
 type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "tall" | "feature"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean };
 const beforeAfterCases: BeforeAfterCase[] = [
-  { slot: "pair-a", title: "Úlcera em calcanhar", description: "O acompanhamento especializado permitiu observar a evolução da lesão no calcanhar e seu processo de cicatrização.", before: ulceraCalcanharAntes.url, after: ulceraCalcanharDepois.url },
-  { slot: "pair-b", title: "Ferida profunda em coto", description: "Com acompanhamento, desbridamento e curativos especializados, foi possível observar a evolução da ferida profunda em coto de amputação.", before: ulceraCotoAntes.url, after: ulceraCotoDepois.url },
+  { slot: "pair-a", title: "Úlcera em calcanhar", description: "Lesão aberta na região do calcanhar, com leito de granulação, acompanhada até o fechamento da ferida e a formação de tecido de cicatrização.", before: ulceraCalcanharAntes.url, after: ulceraCalcanharDepois.url },
+  { slot: "pair-b", title: "Ferida profunda em coto de amputação", description: "Ferida com tecido desvitalizado e bordas espessas que, com desbridamento e curativos especializados, evoluiu para um leito regular de tecido de granulação.", before: ulceraCotoAntes.url, after: ulceraCotoDepois.url },
+  { slot: "tall", title: "Acompanhamento de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida aberta; à direita, a mesma área com a lesão praticamente fechada.", single: cotoAmputacaoRegistro.url, aspect: "900/1600", panels: true },
+  { slot: "feature", title: "Cicatrização de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida com tecido desvitalizado; à direita, a mesma área em fase de cicatrização.", single: cotoAmputacaoAntesDepois.url, aspect: "828/739" },
 ];
 
 function Index() {
@@ -126,7 +128,7 @@ function Index() {
         <div className="container">
           <div className="section-heading center">
             <span className="eyebrow">ACOMPANHAMENTO</span>
-            <h2>A evolução do cuidado com <em>feridas.</em></h2>
+            <h2>Antes e depois: cada etapa merece <em>atenção.</em></h2>
             <p>Registros de acompanhamento de feridas publicados com autorização da pessoa atendida. Cada caso é único e os resultados variam conforme as condições individuais e o plano de cuidado.</p>
           </div>
           <div className="before-after-grid">
@@ -136,7 +138,7 @@ function Index() {
                   <div className="before-after-stack">
                     <div className="before-after-photo before-after-full" style={item.aspect ? { aspectRatio: item.aspect } : undefined}>
                       <img src={item.single} alt={`Registro de acompanhamento: ${item.title}`} loading="lazy" />
-                      {item.panels && <></>}
+                      {item.panels && <><span className="before-after-label">ANTES</span><span className="before-after-label after-label before-after-label-right">DEPOIS</span></>}
                     </div>
                     <div className="before-after-card-copy">
                       <h3>{item.title}</h3>
@@ -147,12 +149,12 @@ function Index() {
                   <>
                     <div className="before-after-images">
                       <div className="before-after-photo">
-                        
-                        <img src={item.before} alt={`${item.title} — registro da evolução da ferida`} loading="lazy" />
+                        <span className="before-after-label">ANTES</span>
+                        <img src={item.before} alt={`${item.title} — antes`} loading="lazy" />
                       </div>
                       <div className="before-after-photo">
-                        
-                        <img src={item.after} alt={`${item.title} — registro da evolução da ferida`} loading="lazy" />
+                        <span className="before-after-label after-label">DEPOIS</span>
+                        <img src={item.after} alt={`${item.title} — depois`} loading="lazy" />
                       </div>
                     </div>
                     <div className="before-after-card-copy">
