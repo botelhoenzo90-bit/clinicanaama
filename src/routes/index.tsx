@@ -9,6 +9,7 @@ import ulceraCotoAntes from "@/assets/ulcera-coto-antes.jpg.asset.json";
 import ulceraCotoDepois from "@/assets/ulcera-coto-depois.jpg.asset.json";
 import ulceraCalcanharAntes from "@/assets/ulcera-calcanhar-antes.jpg.asset.json";
 import ulceraCalcanharDepois from "@/assets/ulcera-calcanhar-depois.jpg.asset.json";
+import fatimaAtendimento from "@/assets/fatima-atendimento-domiciliar.jpg.asset.json";
 import logoNaama from "@/assets/logo-naama.png.asset.json";
 import shareNaama from "@/assets/compartilhamento-naama.jpg.asset.json";
 
@@ -47,10 +48,14 @@ const faqs = [
   ["Como posso agendar?", "Clique em qualquer botão de WhatsApp desta página para conversar com a equipe da Clínica Naamã e consultar informações sobre atendimento e disponibilidade."],
 ];
 
-type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "tall" | "feature"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean };
+type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "tall" | "feature" | "evolution"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; stages?: { label: string; src: string; after?: boolean }[] };
 const beforeAfterCases: BeforeAfterCase[] = [
-  { slot: "pair-a", title: "Úlcera em calcanhar", description: "Lesão aberta na região do calcanhar, com leito de granulação, acompanhada até o fechamento da ferida e a formação de tecido de cicatrização.", before: ulceraCalcanharAntes.url, after: ulceraCalcanharDepois.url },
-  { slot: "pair-b", title: "Ferida profunda em coto de amputação", description: "Ferida com tecido desvitalizado e bordas espessas que, com desbridamento e curativos especializados, evoluiu para um leito regular de tecido de granulação.", before: ulceraCotoAntes.url, after: ulceraCotoDepois.url },
+  { slot: "evolution", title: "Evolução de uma ferida em coto de amputação", description: "Acompanhamento de um mesmo caso, etapa por etapa: a ferida profunda, com tecido desvitalizado, passou por desbridamento e curativos especializados, formou tecido de granulação e evoluiu até o fechamento, com a cicatriz no lugar da lesão. Cada etapa mostra como o cuidado contínuo faz diferença.", stages: [
+    { label: "ANTES", src: ulceraCotoAntes.url },
+    { label: "EVOLUÇÃO", src: ulceraCotoDepois.url },
+    { label: "EVOLUÇÃO", src: ulceraCalcanharAntes.url, after: true },
+    { label: "DEPOIS", src: ulceraCalcanharDepois.url, after: true },
+  ] },
   { slot: "tall", title: "Acompanhamento de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida aberta; à direita, a mesma área com a lesão praticamente fechada.", single: cotoAmputacaoRegistro.url, aspect: "900/1600", panels: true },
   { slot: "feature", title: "Cicatrização de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida com tecido desvitalizado; à direita, a mesma área em fase de cicatrização.", single: cotoAmputacaoAntesDepois.url, aspect: "828/739" },
 ];
@@ -92,9 +97,11 @@ function Index() {
 
       <div className="info-marquee" aria-label="Áreas de atendimento"><div className="marquee-track">{[1,2].map(n=><div className="marquee-group" key={n}><span>✦ FERIDAS AGUDAS E CRÔNICAS</span><span>✦ PÉ DIABÉTICO</span><span>✦ CURATIVOS ESPECIALIZADOS</span><span>✦ LESÕES POR PRESSÃO</span><span>✦ ÚLCERAS VASCULARES</span><span>✦ ATENDIMENTO NA RESIDÊNCIA</span><span>✦ MEDICAÇÕES CONFORME PRESCRIÇÃO</span><span>✦ CUIDADO INDIVIDUALIZADO</span></div>)}</div></div>
 
-      <section className="section intro-section" id="sobre"><div className="container intro-grid"><div className="intro-illustration maria-profile-photo photo-placeholder" role="img" aria-label="Espaço reservado para foto de Fátima"><span>FOTO</span><small>Imagem de Fátima</small></div><div className="intro-copy"><span className="eyebrow">PRAZER, SOU FÁTIMA</span><h2>Cuidado de enfermagem no conforto da sua <em>residência.</em></h2><p>A Clínica Naamã oferece atendimento domiciliar para quem precisa de cuidados de enfermagem sem sair de casa. Cada visita é planejada de acordo com a necessidade da pessoa, com avaliação, curativos especializados e acompanhamento da evolução.</p><p>Também é possível realizar a administração de medicações na residência, sempre conforme prescrição e avaliação profissional, com cuidado, atenção e orientação à família.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o atendimento de enfermagem")}><MessageCircle size={18}/> conhecer o atendimento</button></div></div></section>
+      <section className="section intro-section" id="sobre"><div className="container intro-grid"><div className="intro-illustration maria-profile-photo"><img src={fatimaAtendimento.url} alt="Fátima realizando curativo domiciliar em paciente" loading="lazy"/></div><div className="intro-copy"><span className="eyebrow">PRAZER, SOU FÁTIMA</span><h2>Cuidado de enfermagem no conforto da sua <em>residência.</em></h2><p>A Clínica Naamã oferece atendimento domiciliar para quem precisa de cuidados de enfermagem sem sair de casa. Cada visita é planejada de acordo com a necessidade da pessoa, com avaliação, curativos especializados e acompanhamento da evolução.</p><p>Também é possível realizar a administração de medicações na residência, sempre conforme prescrição e avaliação profissional, com cuidado, atenção e orientação à família.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o atendimento de enfermagem")}><MessageCircle size={18}/> conhecer o atendimento</button></div></div></section>
 
       <section className="section pain-section"><div className="container narrow center"><span className="eyebrow">QUANDO PROCURAR APOIO</span><h2>Feridas persistentes e alterações nos pés merecem <em>atenção especializada.</em></h2><p>Feridas que não cicatrizam, lesões nos pés de pessoas com diabetes e alterações na pele precisam de atenção. A avaliação profissional ajuda a orientar o cuidado e identificar quando é necessário encaminhamento ou atuação conjunta com outros profissionais.</p><div className="check-list centered-list"><div><Check size={17}/><span>Você ou alguém da família precisa de cuidado para uma ferida aguda ou crônica.</span></div><div><Check size={17}/><span>Você tem diabetes e percebeu uma lesão, fissura ou alteração nos pés.</span></div><div><Check size={17}/><span>A ferida persiste, apresenta mudanças ou precisa de curativos especializados.</span></div></div><button className="btn btn-primary" onClick={() => goWhatsapp("tirar dúvidas sobre o cuidado de uma ferida")}><MessageCircle size={18}/> Quero tirar minhas dúvidas</button></div></section>
+
+      <section className="section home-care-section" id="atendimento-domiciliar"><div className="container center"><span className="eyebrow">ATENDIMENTO DOMICILIAR</span><h2>Ferida que não cicatriza? <em>Nós vamos até você!</em></h2><p className="home-care-lead">Cuidado profissional de enfermagem no conforto da sua casa, sem filas e sem deslocamento — com segurança para o paciente e tranquilidade para a família.</p><div className="home-care-grid">{[["🩹","Curativo domiciliar profissional","Avaliação da ferida, limpeza, escolha da cobertura adequada e troca de curativos com técnica e materiais especializados."],["💉","Aplicação de medicamentos em casa","Administração de medicações injetáveis e outras, conforme prescrição médica, com todo o cuidado e orientação."],["📋","Acompanhamento da evolução","Registro de cada etapa do tratamento e orientação à família sobre os cuidados entre as visitas."]].map(([icon,t,d])=><article className="home-care-card" key={t}><span className="home-care-icon" aria-hidden="true">{icon}</span><h3>{t}</h3><p>{d}</p></article>)}</div><button className="btn btn-primary" onClick={() => goWhatsapp("agendar um atendimento domiciliar")}><MessageCircle size={18}/> Agendar atendimento em casa</button></div></section>
 
       <section className="section procedures-section" id="tratamentos"><div className="container"><div className="section-heading center"><span className="eyebrow">CUIDADOS DA CLÍNICA NAAMÃ</span><h2>Atenção especializada para cuidar de feridas com responsabilidade.</h2><p>Conheça os cuidados oferecidos pela Clínica Naamã. A conduta é definida de forma individual, conforme a avaliação e as necessidades de cada pessoa.</p></div><div className="procedure-window"><div className="procedure-track">{[...services,...services].map(({title,text,image,icon:Icon},i)=><article className="procedure-card maria-service-card" key={`${title}-${i}`}><img className="procedure-photo" src={image} alt={title} loading={i<services.length?"eager":"lazy"}/><div className="procedure-content"><div className="procedure-icon"><Icon size={21}/></div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("saber qual atendimento pode ser adequado para mim")}><MessageCircle size={18}/> Consultar sobre meu caso</button></div></div></section>
 
@@ -134,7 +141,22 @@ function Index() {
           <div className="before-after-grid">
             {beforeAfterCases.map((item) => (
               <article className={`before-after-card ba-${item.slot}`} key={item.title}>
-                {item.single ? (
+                {item.stages ? (
+                  <>
+                    <div className="before-after-images ba-stages">
+                      {item.stages.map((s, i) => (
+                        <div className="before-after-photo" key={i}>
+                          <span className={s.after ? "before-after-label after-label" : "before-after-label"}>{i + 1}. {s.label}</span>
+                          <img src={s.src} alt={`${item.title} — etapa ${i + 1}`} loading="lazy" />
+                        </div>
+                      ))}
+                    </div>
+                    <div className="before-after-card-copy">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                  </>
+                ) : item.single ? (
                   <div className="before-after-stack">
                     <div className="before-after-photo before-after-full" style={item.aspect ? { aspectRatio: item.aspect } : undefined}>
                       <img src={item.single} alt={`Registro de acompanhamento: ${item.title}`} loading="lazy" />
