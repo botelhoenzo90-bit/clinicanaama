@@ -9,6 +9,7 @@ import ulceraCotoAntes from "@/assets/ulcera-coto-antes.jpg.asset.json";
 import ulceraCotoDepois from "@/assets/ulcera-coto-depois.jpg.asset.json";
 import ulceraCalcanharAntes from "@/assets/ulcera-calcanhar-antes.jpg.asset.json";
 import ulceraCalcanharDepois from "@/assets/ulcera-calcanhar-depois.jpg.asset.json";
+import fatimaAtendimento from "@/assets/fatima-atendimento-domiciliar.jpg.asset.json";
 import logoNaama from "@/assets/logo-naama.png.asset.json";
 import shareNaama from "@/assets/compartilhamento-naama.jpg.asset.json";
 
@@ -47,10 +48,14 @@ const faqs = [
   ["Como posso agendar?", "Clique em qualquer botão de WhatsApp desta página para conversar com a equipe da Clínica Naamã e consultar informações sobre atendimento e disponibilidade."],
 ];
 
-type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "tall" | "feature"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean };
+type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "tall" | "feature" | "evolution"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; stages?: { label: string; src: string; after?: boolean }[] };
 const beforeAfterCases: BeforeAfterCase[] = [
-  { slot: "pair-a", title: "Úlcera em calcanhar", description: "Lesão aberta na região do calcanhar, com leito de granulação, acompanhada até o fechamento da ferida e a formação de tecido de cicatrização.", before: ulceraCalcanharAntes.url, after: ulceraCalcanharDepois.url },
-  { slot: "pair-b", title: "Ferida profunda em coto de amputação", description: "Ferida com tecido desvitalizado e bordas espessas que, com desbridamento e curativos especializados, evoluiu para um leito regular de tecido de granulação.", before: ulceraCotoAntes.url, after: ulceraCotoDepois.url },
+  { slot: "evolution", title: "Evolução de uma ferida em coto de amputação", description: "Acompanhamento de um mesmo caso, etapa por etapa: a ferida profunda, com tecido desvitalizado, passou por desbridamento e curativos especializados, formou tecido de granulação e evoluiu até o fechamento, com a cicatriz no lugar da lesão. Cada etapa mostra como o cuidado contínuo faz diferença.", stages: [
+    { label: "ANTES", src: ulceraCotoAntes.url },
+    { label: "EVOLUÇÃO", src: ulceraCotoDepois.url },
+    { label: "EVOLUÇÃO", src: ulceraCalcanharAntes.url, after: true },
+    { label: "DEPOIS", src: ulceraCalcanharDepois.url, after: true },
+  ] },
   { slot: "tall", title: "Acompanhamento de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida aberta; à direita, a mesma área com a lesão praticamente fechada.", single: cotoAmputacaoRegistro.url, aspect: "900/1600", panels: true },
   { slot: "feature", title: "Cicatrização de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida com tecido desvitalizado; à direita, a mesma área em fase de cicatrização.", single: cotoAmputacaoAntesDepois.url, aspect: "828/739" },
 ];
