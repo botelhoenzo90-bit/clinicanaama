@@ -11,3 +11,4 @@
 - [x] Colocar as seis novas fotos na seção antes e depois
 - [x] Centralizar os tópicos da seção quando procurar apoio e quadrar a logomarca do rodapé
 - [x] Colocar as dez novas fotos na seção antes e depois
+- [x] Colocar as três fotos restantes na seção antes e depois
