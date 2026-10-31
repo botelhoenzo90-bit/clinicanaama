@@ -773,12 +773,12 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 .ba-wide-b{grid-column:1/span 2;grid-row:3}
 .ba-pair-c{grid-column:1/span 2;grid-row:4}
 .ba-pair-d{grid-column:1/span 2;grid-row:5}
-.ba-pair-d .before-after-photo{min-height:360px}
+@media(min-width:761px){.ba-pair-d .before-after-images{max-width:660px;margin:0 auto}.ba-pair-d .before-after-photo{min-height:560px}}
 .ba-solo-a{grid-column:1/span 2;grid-row:6;width:100%;max-width:none}
-.ba-solo-a .before-after-stack{grid-template-columns:minmax(0,400px) minmax(0,1fr);align-items:center;gap:34px;padding:26px 28px}
+.ba-solo-a .before-after-stack{grid-template-columns:minmax(0,420px) minmax(0,520px);justify-content:center;align-items:center;gap:44px;padding:26px 28px}
 .ba-solo-a .before-after-stack .before-after-card-copy{max-width:600px}
 .ba-tall{grid-column:1/span 2;grid-row:7;width:100%;max-width:none}
-.ba-tall .before-after-stack{grid-template-columns:minmax(0,430px) minmax(0,1fr);align-items:center;gap:34px;padding:26px 28px}
+.ba-tall .before-after-stack{grid-template-columns:minmax(0,430px) minmax(0,520px);justify-content:center;align-items:center;gap:44px;padding:26px 28px}
 .ba-tall .before-after-stack .before-after-card-copy{max-width:600px}
 @media(max-width:760px){.ba-tall .before-after-stack,.ba-solo-a .before-after-stack{grid-template-columns:minmax(0,1fr);padding:18px}}
 .ba-pair-c .before-after-photo{min-height:360px}

@@ -61,7 +61,7 @@ const faqs = [
   ["Como posso agendar?", "Clique em qualquer botão de WhatsApp desta página para conversar com a equipe da Clínica Naamã e consultar informações sobre atendimento e disponibilidade."],
 ];
 
-type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "pair-c" | "tall" | "feature" | "evolution" | "wide-a" | "wide-b" | "solo-a" | "solo-b"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; stages?: { label: string; src: string; after?: boolean }[] };
+type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "pair-c" | "pair-d" | "tall" | "feature" | "evolution" | "wide-a" | "wide-b" | "solo-a" | "solo-b"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; badge?: string; stages?: { label: string; src: string; after?: boolean }[] };
 const beforeAfterCases: BeforeAfterCase[] = [
   { slot: "evolution", title: "Evolução de uma ferida no calcanhar", description: "Acompanhamento de um mesmo caso, etapa por etapa: a ferida profunda no calcanhar, com tecido desvitalizado, passou por desbridamento e curativos especializados, formou tecido de granulação e evoluiu até o fechamento, com a cicatriz no lugar da lesão. Cada etapa mostra como o cuidado contínuo faz diferença.", stages: [
     { label: "ANTES", src: ulceraCotoAntes.url },
@@ -87,7 +87,7 @@ const beforeAfterCases: BeforeAfterCase[] = [
     { label: "DEPOIS", src: cotoQuaseFechado.url, after: true },
   ] },
   { slot: "pair-d", title: "Evolução de uma ferida no pé, com o dedão preservado", description: "Acompanhamento de um mesmo caso: à esquerda, a ferida aberta com tecido escuro e áreas de cicatrização; à direita, a mesma região já fechada, com a cicatriz formada e o dedão preservado.", before: feridaLateralAntes.url, after: feridaLateralDepois.url },
-  { slot: "solo-a", title: "Ferida profunda em coto de amputação", description: "Registro de uma etapa do acompanhamento: cavidade profunda com tecido desvitalizado, tratada com curativos especializados e avaliação contínua para orientar a evolução do tratamento.", single: cotoCavidadeProfunda.url, aspect: "899/1599" },
+  { slot: "solo-a", title: "Ferida profunda em coto de amputação", description: "Registro de uma etapa do acompanhamento: cavidade profunda com tecido desvitalizado, tratada com curativos especializados e avaliação contínua para orientar a evolução do tratamento.", single: cotoCavidadeProfunda.url, aspect: "899/1599", badge: "ACOMPANHAMENTO" },
   { slot: "tall", title: "Acompanhamento de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida aberta; à direita, a mesma área com a lesão praticamente fechada.", single: cotoAmputacaoRegistro.url, aspect: "900/1600", panels: true },
 ];
 
@@ -192,6 +192,7 @@ function Index() {
                     <div className="before-after-photo before-after-full" style={item.aspect ? { aspectRatio: item.aspect } : undefined}>
                       <img src={item.single} alt={`Registro de acompanhamento: ${item.title}`} loading="lazy" />
                       {item.panels && <><span className="before-after-label">ANTES</span><span className="before-after-label after-label before-after-label-right">DEPOIS</span></>}
+                      {item.badge && <span className="before-after-label">{item.badge}</span>}
                     </div>
                     <div className="before-after-card-copy">
                       <h3>{item.title}</h3>
