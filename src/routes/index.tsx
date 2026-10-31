@@ -20,6 +20,8 @@ import cotoLesaoExtensa from "@/assets/coto-lesao-extensa.jpg.asset.json";
 import cotoQuaseFechado from "@/assets/coto-quase-fechado.jpg.asset.json";
 import cotoGranulacao from "@/assets/coto-granulacao.jpg.asset.json";
 import cotoCavidadeProfunda from "@/assets/coto-cavidade-profunda.jpg.asset.json";
+import feridaLateralAntes from "@/assets/ferida-lateral-antes.jpg.asset.json";
+import feridaLateralDepois from "@/assets/ferida-lateral-depois.jpg.asset.json";
 import fatimaAtendimento from "@/assets/fatima-atendimento-domiciliar.jpg.asset.json";
 import logoNaama from "@/assets/logo-naama.png.asset.json";
 import shareNaama from "@/assets/compartilhamento-naama.jpg.asset.json";
@@ -84,6 +86,7 @@ const beforeAfterCases: BeforeAfterCase[] = [
     { label: "EVOLUÇÃO", src: cotoGranulacao.url },
     { label: "DEPOIS", src: cotoQuaseFechado.url, after: true },
   ] },
+  { slot: "pair-d", title: "Evolução de uma ferida no pé, com o dedão preservado", description: "Acompanhamento de um mesmo caso: à esquerda, a ferida aberta com tecido escuro e áreas de cicatrização; à direita, a mesma região já fechada, com a cicatriz formada e o dedão preservado.", before: feridaLateralAntes.url, after: feridaLateralDepois.url },
   { slot: "solo-a", title: "Ferida profunda em coto de amputação", description: "Registro de uma etapa do acompanhamento: cavidade profunda com tecido desvitalizado, tratada com curativos especializados e avaliação contínua para orientar a evolução do tratamento.", single: cotoCavidadeProfunda.url, aspect: "899/1599" },
   { slot: "tall", title: "Acompanhamento de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida aberta; à direita, a mesma área com a lesão praticamente fechada.", single: cotoAmputacaoRegistro.url, aspect: "900/1600", panels: true },
 ];
