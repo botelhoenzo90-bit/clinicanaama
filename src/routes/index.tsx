@@ -58,7 +58,7 @@ const faqs = [
   ["Como posso agendar?", "Clique em qualquer botão de WhatsApp desta página para conversar com a equipe da Clínica Naamã e consultar informações sobre atendimento e disponibilidade."],
 ];
 
-type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "tall" | "feature" | "evolution"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; stages?: { label: string; src: string; after?: boolean }[] };
+type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "pair-c" | "tall" | "feature" | "evolution" | "wide-a" | "wide-b"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; stages?: { label: string; src: string; after?: boolean }[] };
 const beforeAfterCases: BeforeAfterCase[] = [
   { slot: "evolution", title: "Evolução de uma ferida no calcanhar", description: "Acompanhamento de um mesmo caso, etapa por etapa: a ferida profunda no calcanhar, com tecido desvitalizado, passou por desbridamento e curativos especializados, formou tecido de granulação e evoluiu até o fechamento, com a cicatriz no lugar da lesão. Cada etapa mostra como o cuidado contínuo faz diferença.", stages: [
     { label: "ANTES", src: ulceraCotoAntes.url },
@@ -66,6 +66,19 @@ const beforeAfterCases: BeforeAfterCase[] = [
     { label: "EVOLUÇÃO", src: ulceraCalcanharAntes.url, after: true },
     { label: "DEPOIS", src: ulceraCalcanharDepois.url, after: true },
   ] },
+  { slot: "wide-a", title: "Evolução de uma ferida grave no pé", description: "Acompanhamento de um mesmo caso, etapa por etapa: a lesão extensa com tecido escuro, a ferida aberta que formou tecido de granulação, a redução gradual do tamanho e, por fim, o fechamento completo, com cicatriz no lugar da lesão.", stages: [
+    { label: "ANTES", src: ulceraNecroticaPes.url },
+    { label: "EVOLUÇÃO", src: cotoGranulando.url },
+    { label: "EVOLUÇÃO", src: cotoFechando.url, after: true },
+    { label: "DEPOIS", src: cotoCicatrizado.url, after: true },
+  ] },
+  { slot: "wide-b", title: "Evolução de uma ferida no dorso do pé", description: "Acompanhamento de um mesmo caso, etapa por etapa: a cavidade profunda e aberta, a formação de tecido de granulação saudável, a contração progressiva da ferida e o fechamento final.", stages: [
+    { label: "ANTES", src: feridaDorsoAberta.url },
+    { label: "EVOLUÇÃO", src: feridaDorsoGranulando.url },
+    { label: "EVOLUÇÃO", src: feridaDorsoFechando.url, after: true },
+    { label: "DEPOIS", src: feridaDorsoCicatrizada.url, after: true },
+  ] },
+  { slot: "pair-c", title: "Evolução de uma lesão extensa em coto de amputação", description: "Duas etapas de um mesmo acompanhamento: à esquerda, a lesão aberta com tecido desvitalizado; à direita, a mesma área praticamente fechada, restando apenas uma pequena região em cicatrização.", before: cotoLesaoExtensa.url, after: cotoQuaseFechado.url },
   { slot: "tall", title: "Acompanhamento de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida aberta; à direita, a mesma área com a lesão praticamente fechada.", single: cotoAmputacaoRegistro.url, aspect: "900/1600", panels: true },
   { slot: "feature", title: "Cicatrização de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida com tecido desvitalizado; à direita, a mesma área em fase de cicatrização.", single: cotoAmputacaoAntesDepois.url, aspect: "828/739" },
 ];
