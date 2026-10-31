@@ -766,3 +766,19 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 .home-care-section .btn.btn-primary{background:#fff!important;color:#0b4168!important}
 #sobre .maria-profile-photo{min-height:460px}
 #sobre .maria-profile-photo img{object-position:center 20%}
+
+/* Antes e depois: sequências de evolução em largura total */
+.ba-evolution{grid-column:1/span 2;grid-row:1}
+.ba-wide-a{grid-column:1/span 2;grid-row:2}
+.ba-wide-b{grid-column:1/span 2;grid-row:3}
+.ba-pair-c{grid-column:1/span 2;grid-row:4}
+.ba-tall{grid-column:1/span 2;grid-row:5;width:100%;max-width:none}
+.ba-tall .before-after-stack{grid-template-columns:minmax(0,430px) minmax(0,1fr);align-items:center;gap:34px;padding:26px 28px}
+.ba-tall .before-after-stack .before-after-card-copy{max-width:600px}
+@media(max-width:760px){.ba-tall .before-after-stack{grid-template-columns:minmax(0,1fr);padding:18px}}
+.ba-pair-c .before-after-photo{min-height:360px}
+.ba-stages{grid-template-columns:repeat(4,minmax(0,1fr))}
+.ba-stages .before-after-photo{min-height:300px}
+.ba-evolution .before-after-card-copy p,.ba-wide-a .before-after-card-copy p,.ba-wide-b .before-after-card-copy p{max-width:760px}
+@media(max-width:980px){.ba-stages{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.ba-evolution,.ba-wide-a,.ba-wide-b,.ba-pair-c,.ba-tall,.ba-feature{grid-column:1;grid-row:auto}.ba-stages{grid-template-columns:1fr 1fr}.ba-stages .before-after-photo{min-height:210px}}
