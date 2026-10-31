@@ -18,6 +18,8 @@ import feridaDorsoFechando from "@/assets/ferida-dorso-pe-fechando.jpg.asset.jso
 import feridaDorsoCicatrizada from "@/assets/ferida-dorso-pe-cicatrizada.jpg.asset.json";
 import cotoLesaoExtensa from "@/assets/coto-lesao-extensa.jpg.asset.json";
 import cotoQuaseFechado from "@/assets/coto-quase-fechado.jpg.asset.json";
+import cotoGranulacao from "@/assets/coto-granulacao.jpg.asset.json";
+import cotoCavidadeProfunda from "@/assets/coto-cavidade-profunda.jpg.asset.json";
 import fatimaAtendimento from "@/assets/fatima-atendimento-domiciliar.jpg.asset.json";
 import logoNaama from "@/assets/logo-naama.png.asset.json";
 import shareNaama from "@/assets/compartilhamento-naama.jpg.asset.json";
@@ -57,7 +59,7 @@ const faqs = [
   ["Como posso agendar?", "Clique em qualquer botão de WhatsApp desta página para conversar com a equipe da Clínica Naamã e consultar informações sobre atendimento e disponibilidade."],
 ];
 
-type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "pair-c" | "tall" | "feature" | "evolution" | "wide-a" | "wide-b"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; stages?: { label: string; src: string; after?: boolean }[] };
+type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "pair-c" | "tall" | "feature" | "evolution" | "wide-a" | "wide-b" | "solo-a" | "solo-b"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; stages?: { label: string; src: string; after?: boolean }[] };
 const beforeAfterCases: BeforeAfterCase[] = [
   { slot: "evolution", title: "Evolução de uma ferida no calcanhar", description: "Acompanhamento de um mesmo caso, etapa por etapa: a ferida profunda no calcanhar, com tecido desvitalizado, passou por desbridamento e curativos especializados, formou tecido de granulação e evoluiu até o fechamento, com a cicatriz no lugar da lesão. Cada etapa mostra como o cuidado contínuo faz diferença.", stages: [
     { label: "ANTES", src: ulceraCotoAntes.url },
@@ -77,7 +79,12 @@ const beforeAfterCases: BeforeAfterCase[] = [
     { label: "EVOLUÇÃO", src: feridaDorsoFechando.url, after: true },
     { label: "DEPOIS", src: feridaDorsoCicatrizada.url, after: true },
   ] },
-  { slot: "pair-c", title: "Evolução de uma lesão extensa em coto de amputação", description: "Duas etapas de um mesmo acompanhamento: à esquerda, a lesão aberta com tecido desvitalizado; à direita, a mesma área praticamente fechada, restando apenas uma pequena região em cicatrização.", before: cotoLesaoExtensa.url, after: cotoQuaseFechado.url },
+  { slot: "pair-c", title: "Evolução de uma lesão extensa em coto de amputação", description: "Acompanhamento de um mesmo caso, etapa por etapa: a lesão aberta com tecido desvitalizado, a ferida preenchida por tecido de granulação saudável e, por fim, a área praticamente fechada, restando apenas uma pequena região em cicatrização.", stages: [
+    { label: "ANTES", src: cotoLesaoExtensa.url },
+    { label: "EVOLUÇÃO", src: cotoGranulacao.url },
+    { label: "DEPOIS", src: cotoQuaseFechado.url, after: true },
+  ] },
+  { slot: "solo-a", title: "Ferida profunda em coto de amputação", description: "Registro de uma etapa do acompanhamento: cavidade profunda com tecido desvitalizado, tratada com curativos especializados e avaliação contínua para orientar a evolução do tratamento.", single: cotoCavidadeProfunda.url, aspect: "899/1599" },
   { slot: "tall", title: "Acompanhamento de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida aberta; à direita, a mesma área com a lesão praticamente fechada.", single: cotoAmputacaoRegistro.url, aspect: "900/1600", panels: true },
 ];
 
