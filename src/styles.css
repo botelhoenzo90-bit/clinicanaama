@@ -771,9 +771,10 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 .ba-evolution{grid-column:1/span 2;grid-row:1}
 .ba-wide-a{grid-column:1/span 2;grid-row:2}
 .ba-wide-b{grid-column:1/span 2;grid-row:3}
-.ba-pair-c{grid-column:1;grid-row:4}
-.ba-tall{grid-column:2;grid-row:4}
-.ba-feature{grid-column:1/span 2;grid-row:5;justify-self:center;width:100%;max-width:820px}
+.ba-pair-c{grid-column:1/span 2;grid-row:4}
+.ba-tall{grid-column:1/span 2;grid-row:5;justify-self:center;width:100%;max-width:620px}
+.ba-tall .before-after-stack{grid-template-columns:minmax(0,480px)}
+.ba-pair-c .before-after-photo{min-height:360px}
 .ba-stages{grid-template-columns:repeat(4,minmax(0,1fr))}
 .ba-stages .before-after-photo{min-height:300px}
 .ba-evolution .before-after-card-copy p,.ba-wide-a .before-after-card-copy p,.ba-wide-b .before-after-card-copy p{max-width:760px}

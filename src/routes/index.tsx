@@ -4,7 +4,6 @@ import {
   Activity, ArrowRight, Bandage, Check, ChevronDown, CircleCheck, HeartPulse, MessageCircle, ShieldCheck, Stethoscope,
 } from "lucide-react";
 import cotoAmputacaoRegistro from "@/assets/coto-amputacao-registro.jpg.asset.json";
-import cotoAmputacaoAntesDepois from "@/assets/coto-amputacao-antes-depois.jpg.asset.json";
 import ulceraCotoAntes from "@/assets/ulcera-coto-antes.jpg.asset.json";
 import ulceraCotoDepois from "@/assets/ulcera-coto-depois.jpg.asset.json";
 import ulceraCalcanharAntes from "@/assets/ulcera-calcanhar-antes.jpg.asset.json";
@@ -80,7 +79,6 @@ const beforeAfterCases: BeforeAfterCase[] = [
   ] },
   { slot: "pair-c", title: "Evolução de uma lesão extensa em coto de amputação", description: "Duas etapas de um mesmo acompanhamento: à esquerda, a lesão aberta com tecido desvitalizado; à direita, a mesma área praticamente fechada, restando apenas uma pequena região em cicatrização.", before: cotoLesaoExtensa.url, after: cotoQuaseFechado.url },
   { slot: "tall", title: "Acompanhamento de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida aberta; à direita, a mesma área com a lesão praticamente fechada.", single: cotoAmputacaoRegistro.url, aspect: "900/1600", panels: true },
-  { slot: "feature", title: "Cicatrização de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida com tecido desvitalizado; à direita, a mesma área em fase de cicatrização.", single: cotoAmputacaoAntesDepois.url, aspect: "828/739" },
 ];
 
 function Index() {
