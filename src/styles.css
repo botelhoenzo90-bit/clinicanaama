@@ -790,3 +790,8 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 .ba-evolution .before-after-card-copy p,.ba-wide-a .before-after-card-copy p,.ba-wide-b .before-after-card-copy p{max-width:760px}
 @media(max-width:980px){.ba-stages{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.ba-evolution,.ba-wide-a,.ba-wide-b,.ba-pair-c,.ba-pair-d,.ba-solo-a,.ba-tall,.ba-feature{grid-column:1;grid-row:auto}.ba-stages{grid-template-columns:1fr 1fr}.ba-pair-c .ba-stages .before-after-photo:last-child{grid-column:1/span 2}.ba-stages .before-after-photo{min-height:210px}}
+
+/* Seção "Prazer, sou Fátima": retrato exibido por inteiro, sem recorte */
+#sobre .intro-illustration.maria-profile-photo{height:auto;min-height:0;padding:0;width:-moz-fit-content;width:fit-content;max-width:100%;justify-self:center;margin-inline:auto;overflow:hidden;border-radius:16px;background:linear-gradient(145deg,#10264a,#1d416f)}
+#sobre .intro-illustration.maria-profile-photo img{position:static;inset:auto;display:block;width:auto;height:auto;min-height:0;max-width:100%;max-height:640px;object-fit:contain;object-position:center;border-radius:0}
+@media(max-width:760px){#sobre .intro-illustration.maria-profile-photo{min-height:0}#sobre .intro-illustration.maria-profile-photo img{max-height:520px}}

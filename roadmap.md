@@ -12,3 +12,4 @@
 - [x] Centralizar os tópicos da seção quando procurar apoio e quadrar a logomarca do rodapé
 - [x] Colocar as dez novas fotos na seção antes e depois
 - [x] Colocar as três fotos restantes na seção antes e depois
+- [x] Trocar a imagem da seção "Prazer, sou Fátima" pela nova ilustração, sem recorte
