@@ -14,3 +14,4 @@
 - [x] Colocar as três fotos restantes na seção antes e depois
 - [x] Trocar a imagem da seção "Prazer, sou Fátima" pela nova ilustração, sem recorte
 - [x] Trocar a ilustração da seção "Prazer, sou Fátima" pela versão mais recente
+- [x] Trocar "Clínica Naamã" por "Clínica Domiciliar Naamã" em todo o site
