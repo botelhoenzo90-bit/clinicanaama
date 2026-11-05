@@ -605,6 +605,7 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 .video-testimonial-duration{display:inline-block;margin-top:11px;padding:4px 11px;border-radius:999px;background:#eef6f6;color:#0b4168;font-size:11px;font-weight:800;letter-spacing:.6px}
 @media(max-width:980px){.video-testimonials-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.video-testimonials-grid{grid-template-columns:1fr}.video-testimonial-frame{max-width:340px;margin:0 auto}}
+.video-testimonials-note{max-width:800px;margin:20px auto 0;color:#625f5a;font-size:12px;line-height:1.7;text-align:center}
 .before-after-section{background:#f5eee4!important}
 .before-after-section .section-heading h2{color:#0b4168!important}
 .before-after-section .section-heading p,.before-after-card-copy p,.before-after-hint{color:#625f5a!important}
