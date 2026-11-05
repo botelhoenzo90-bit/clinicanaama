@@ -32,6 +32,10 @@ import cotoGranulacao from "@/assets/coto-granulacao.jpg.asset.json";
 import cotoCavidadeProfunda from "@/assets/coto-cavidade-profunda.jpg.asset.json";
 import feridaLateralAntes from "@/assets/ferida-lateral-antes.jpg.asset.json";
 import feridaLateralDepois from "@/assets/ferida-lateral-depois.jpg.asset.json";
+import calcanharEvo1 from "@/assets/calcanhar-evo-33.jpg.asset.json";
+import calcanharEvo2 from "@/assets/calcanhar-evo-34.jpg.asset.json";
+import calcanharEvo3 from "@/assets/calcanhar-evo-35.jpg.asset.json";
+import calcanharEvo4 from "@/assets/calcanhar-evo-36.jpg.asset.json";
 import fatimaCurativoEmCasa from "@/assets/fatima-curativo-em-casa.jpg.asset.json";
 import logoNaama from "@/assets/logo-naama.png.asset.json";
 import shareNaama from "@/assets/compartilhamento-naama.jpg.asset.json";
@@ -71,7 +75,7 @@ const faqs = [
   ["Como posso agendar?", "Clique em qualquer botão de WhatsApp desta página para conversar com a equipe da Clínica Domiciliar Naamã e consultar informações sobre atendimento e disponibilidade."],
 ];
 
-type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "pair-c" | "pair-d" | "tall" | "feature" | "evolution" | "wide-a" | "wide-b" | "wide-c" | "wide-d" | "solo-a" | "solo-b"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; badge?: string; stages?: { label: string; src: string; after?: boolean }[] };
+type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "pair-c" | "pair-d" | "tall" | "feature" | "evolution" | "wide-a" | "wide-b" | "wide-c" | "wide-d" | "wide-e" | "solo-a" | "solo-b"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; badge?: string; stages?: { label: string; src: string; after?: boolean }[] };
 const beforeAfterCases: BeforeAfterCase[] = [
   { slot: "evolution", title: "Evolução de uma ferida no calcanhar", description: "Acompanhamento de um mesmo caso, etapa por etapa: a ferida profunda no calcanhar, com tecido desvitalizado, passou por desbridamento e curativos especializados, formou tecido de granulação e evoluiu até o fechamento, com a cicatriz no lugar da lesão. Cada etapa mostra como o cuidado contínuo faz diferença.", stages: [
     { label: "ANTES", src: ulceraCotoAntes.url },
@@ -113,6 +117,12 @@ const beforeAfterCases: BeforeAfterCase[] = [
   { slot: "pair-d", title: "Evolução de uma ferida no pé, com o dedão preservado", description: "Acompanhamento de um mesmo caso: à esquerda, a ferida aberta com tecido escuro e áreas de cicatrização; à direita, a mesma região já fechada, com a cicatriz formada e o dedão preservado.", before: feridaLateralAntes.url, after: feridaLateralDepois.url },
   { slot: "solo-a", title: "Ferida profunda em coto de amputação", description: "Registro de uma etapa do acompanhamento: cavidade profunda com tecido desvitalizado, tratada com curativos especializados e avaliação contínua para orientar a evolução do tratamento.", single: cotoCavidadeProfunda.url, badge: "ACOMPANHAMENTO" },
   { slot: "tall", title: "Acompanhamento de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida aberta; à direita, a mesma área com a lesão praticamente fechada.", single: cotoAmputacaoRegistro.url, aspect: "900/1600", panels: true },
+  { slot: "wide-e", title: "Evolução de uma ferida profunda no calcanhar", description: "Acompanhamento de um mesmo caso, etapa por etapa: a cavidade profunda com tecido desvitalizado, a limpeza com formação de tecido de granulação saudável, a redução progressiva até uma pequena área central e, por fim, o fechamento completo, com a cicatriz no lugar da lesão.", stages: [
+    { label: "ANTES", src: calcanharEvo1.url },
+    { label: "EVOLUÇÃO", src: calcanharEvo2.url },
+    { label: "EVOLUÇÃO", src: calcanharEvo3.url, after: true },
+    { label: "DEPOIS", src: calcanharEvo4.url, after: true },
+  ] },
 ];
 
 function Index() {
