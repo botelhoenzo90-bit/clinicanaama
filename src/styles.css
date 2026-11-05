@@ -826,3 +826,5 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 .footer-brand .team-credentials{justify-content:flex-start}
 .maria-site .footer-brand .team-credentials span{display:block;color:var(--ink)}
 .maria-site .intro-copy .team-credentials-inline{font-size:14px;font-weight:600;color:var(--gold-dark);margin:4px 0 10px}
+.maria-site .footer-grid .team-credentials span{display:block!important}
+.maria-site .footer-brand .team-credentials{flex-direction:column;gap:2px}
