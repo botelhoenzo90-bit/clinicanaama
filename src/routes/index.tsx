@@ -194,9 +194,9 @@ function Index() {
           <div className="video-testimonials-grid">
             {[
               { video: historia1, poster: historia1Poster, duration: "0:18", title: "Relato gravado em casa", caption: "A pessoa conta, no próprio quarto, como foi o atendimento." },
-              { video: historia2, poster: historia2Poster, duration: "0:33", title: "Acolhimento no dia a dia", caption: "Um recado de quem acompanhou o cuidado de perto." },
-              { video: historia3, poster: historia3Poster, duration: "0:26", title: "Conversando com a câmera", caption: "O relato direto de quem recebeu o curativo em casa." },
-              { video: historia4, poster: historia4Poster, duration: "1:03", title: "A experiência contada em vídeo", caption: "A pessoa descreve como se sentiu durante o tratamento." }
+              { video: historia2, poster: historia2Poster, duration: "0:33", title: "Rosemeire, cuidadora do paciente Juarez", caption: "Ela conta como foi acompanhar o cuidado de perto." },
+              { video: historia3, poster: historia3Poster, duration: "0:26", title: "Esse é meu paciente Cristian", caption: "Relato gravado em casa, direto para a câmera." },
+              { video: historia4, poster: historia4Poster, duration: "1:03", title: "Essa é a irmã da minha paciente Vera Lucia", caption: "Ela conta como foi o cuidado com a irmã." }
             ].map((s)=><article className="video-testimonial-card" key={s.title}>
               <div className="video-testimonial-frame">
                 <video controls playsInline preload="none" poster={s.poster.url}>
