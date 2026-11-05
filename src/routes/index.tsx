@@ -37,6 +37,14 @@ import calcanharEvo2 from "@/assets/calcanhar-evo-34.jpg.asset.json";
 import calcanharEvo3 from "@/assets/calcanhar-evo-35.jpg.asset.json";
 import calcanharEvo4 from "@/assets/calcanhar-evo-36.jpg.asset.json";
 import fatimaCurativoEmCasa from "@/assets/fatima-curativo-em-casa.jpg.asset.json";
+import historia1 from "@/assets/historia-cuidado-1.mp4.asset.json";
+import historia2 from "@/assets/historia-cuidado-2.mp4.asset.json";
+import historia3 from "@/assets/historia-cuidado-3.mp4.asset.json";
+import historia4 from "@/assets/historia-cuidado-4.mp4.asset.json";
+import historia1Poster from "@/assets/historia-cuidado-1-poster.jpg.asset.json";
+import historia2Poster from "@/assets/historia-cuidado-2-poster.jpg.asset.json";
+import historia3Poster from "@/assets/historia-cuidado-3-poster.jpg.asset.json";
+import historia4Poster from "@/assets/historia-cuidado-4-poster.jpg.asset.json";
 import logoNaama from "@/assets/logo-naama.png.asset.json";
 import shareNaama from "@/assets/compartilhamento-naama.jpg.asset.json";
 
@@ -181,16 +189,21 @@ function Index() {
           <div className="section-heading center">
             <span className="eyebrow">HISTÓRIAS DE CUIDADO</span>
             <h2>Depoimentos em vídeo, com histórias de <em>acolhimento.</em></h2>
-            <p>Este espaço está preparado para receber vídeos de pacientes que desejem compartilhar sua experiência, sempre com autorização expressa.</p>
+            <p>Vídeos gravados pelos próprios pacientes, contando como foi o cuidado recebido em casa.</p>
           </div>
           <div className="video-testimonials-grid">
             {[
-              ["Experiência de cuidado","Vídeo de depoimento a adicionar"],
-              ["Acompanhamento de feridas","Vídeo de depoimento a adicionar"],
-              ["Cuidado no dia a dia","Vídeo de depoimento a adicionar"]
-            ].map(([title,caption])=><article className="video-testimonial-card" key={title}>
-              <div className="video-testimonial-placeholder"><span className="video-play" aria-hidden="true">▶</span><span className="video-placeholder-label">VÍDEO</span></div>
-              <div className="video-testimonial-copy"><h3>{title}</h3><p>{caption}</p></div>
+              { video: historia1, poster: historia1Poster, duration: "0:18", title: "Relato gravado em casa", caption: "A pessoa conta, no próprio quarto, como foi o atendimento." },
+              { video: historia2, poster: historia2Poster, duration: "0:33", title: "Acolhimento no dia a dia", caption: "Um recado de quem acompanhou o cuidado de perto." },
+              { video: historia3, poster: historia3Poster, duration: "0:26", title: "Conversando com a câmera", caption: "O relato direto de quem recebeu o curativo em casa." },
+              { video: historia4, poster: historia4Poster, duration: "1:03", title: "A experiência contada em vídeo", caption: "A pessoa descreve como se sentiu durante o tratamento." }
+            ].map((s)=><article className="video-testimonial-card" key={s.title}>
+              <div className="video-testimonial-frame">
+                <video controls playsInline preload="none" poster={s.poster.url}>
+                  <source src={s.video.url} type="video/mp4" />
+                </video>
+              </div>
+              <div className="video-testimonial-copy"><h3>{s.title}</h3><p>{s.caption}</p><span className="video-testimonial-duration">{s.duration}</span></div>
             </article>)}
           </div>
         </div>
