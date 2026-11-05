@@ -806,3 +806,11 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 @media(max-width:760px){.ba-wide-c,.ba-wide-d{grid-column:1;grid-row:auto}.ba-wide-c .ba-stages{grid-template-columns:1fr 1fr}.ba-wide-d .ba-stages{grid-template-columns:1fr 1fr}.ba-wide-c .before-after-photo,.ba-wide-d .before-after-photo{min-height:0}}
 .ba-wide-c .ba-stages,.ba-wide-d .ba-stages{align-items:start}
 .ba-wide-c .ba-stages .before-after-photo,.ba-wide-d .ba-stages .before-after-photo{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:899/1599!important}
+
+.ba-wide-e{grid-column:1/span 2;grid-row:10}
+.ba-wide-e .before-after-photo{min-height:0;aspect-ratio:899/1599}
+.ba-wide-e .before-after-card-copy p{max-width:760px}
+.ba-wide-e .ba-stages{align-items:start}
+.ba-wide-e .ba-stages .before-after-photo{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:899/1599!important}
+@media(max-width:980px){.ba-wide-e .ba-stages{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.ba-wide-e{grid-column:1;grid-row:auto}.ba-wide-e .ba-stages{grid-template-columns:1fr 1fr}}
