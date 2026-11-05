@@ -795,3 +795,14 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 #sobre .intro-illustration.maria-profile-photo{height:auto;min-height:0;padding:0;width:-moz-fit-content;width:fit-content;max-width:100%;justify-self:center;margin-inline:auto;overflow:hidden;border-radius:16px;background:linear-gradient(145deg,#10264a,#1d416f)}
 #sobre .intro-illustration.maria-profile-photo img{position:static;inset:auto;display:block;width:auto;height:auto;min-height:0;max-width:100%;max-height:640px;object-fit:contain;object-position:center;border-radius:0}
 @media(max-width:760px){#sobre .intro-illustration.maria-profile-photo{min-height:0}#sobre .intro-illustration.maria-profile-photo img{max-height:520px}}
+
+/* Antes e depois: novas sequências de evolução */
+.ba-wide-c{grid-column:1/span 2;grid-row:8}
+.ba-wide-d{grid-column:1/span 2;grid-row:9}
+.ba-wide-c .before-after-photo,.ba-wide-d .before-after-photo{min-height:0;aspect-ratio:899/1599}
+.ba-wide-d .ba-stages{grid-template-columns:repeat(6,minmax(0,1fr))}
+.ba-wide-c .before-after-card-copy p,.ba-wide-d .before-after-card-copy p{max-width:760px}
+@media(max-width:980px){.ba-wide-d .ba-stages{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.ba-wide-c,.ba-wide-d{grid-column:1;grid-row:auto}.ba-wide-c .ba-stages{grid-template-columns:1fr 1fr}.ba-wide-d .ba-stages{grid-template-columns:1fr 1fr}.ba-wide-c .before-after-photo,.ba-wide-d .before-after-photo{min-height:0}}
+.ba-wide-c .ba-stages,.ba-wide-d .ba-stages{align-items:start}
+.ba-wide-c .ba-stages .before-after-photo,.ba-wide-d .ba-stages .before-after-photo{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:899/1599!important}
