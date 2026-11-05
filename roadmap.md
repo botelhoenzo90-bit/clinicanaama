@@ -17,3 +17,4 @@
 - [x] Trocar "Clínica Naamã" por "Clínica Domiciliar Naamã" em todo o site
 - [x] Colocar as duas novas sequências de evolução (10 fotos) na seção antes e depois
 - [x] Colocar a nova sequência de 4 etapas (ferida profunda no calcanhar) na seção antes e depois
+- [x] Colocar os quatro vídeos na seção HISTÓRIAS DE CUIDADO
