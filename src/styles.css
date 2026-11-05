@@ -822,6 +822,7 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 @media(max-width:980px){.ba-wide-e .ba-stages{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.ba-wide-e{grid-column:1;grid-row:auto}.ba-wide-e .ba-stages{grid-template-columns:1fr 1fr}}
 .team-credentials{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 10px;margin:14px 0 6px}
-.team-credentials span{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:inherit;border-radius:999px;padding:6px 14px;font-size:13px;line-height:1.4}
+.team-credentials span{display:block;color:var(--ink);font-size:14px;line-height:1.6;max-width:100%;overflow-wrap:anywhere}
 .footer-brand .team-credentials{justify-content:flex-start}
-.team-credentials-inline{font-size:14px;font-weight:600;color:#0b4168;margin:4px 0 10px}
+.maria-site .footer-brand .team-credentials span{display:block;color:var(--ink)}
+.maria-site .intro-copy .team-credentials-inline{font-size:14px;font-weight:600;color:var(--gold-dark);margin:4px 0 10px}
