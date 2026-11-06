@@ -12,10 +12,10 @@ import ulceraNecroticaPes from "@/assets/ulcera-necrotica-pes.jpg.asset.json";
 import cotoGranulando from "@/assets/coto-granulando.jpg.asset.json";
 import cotoFechando from "@/assets/coto-fechando.jpg.asset.json";
 import cotoCicatrizado from "@/assets/coto-cicatrizado.jpg.asset.json";
-import dorsoB1 from "@/assets/dorso-pe-b-1.jpg.asset.json";
-import dorsoB2 from "@/assets/dorso-pe-b-2.jpg.asset.json";
-import dorsoB3 from "@/assets/dorso-pe-b-3.jpg.asset.json";
-import dorsoB4 from "@/assets/dorso-pe-b-4.jpg.asset.json";
+import solaB1 from "@/assets/sola-pe-b-1.jpg.asset.json";
+import solaB2 from "@/assets/sola-pe-b-2.jpg.asset.json";
+import solaB3 from "@/assets/sola-pe-b-3.jpg.asset.json";
+import solaB4 from "@/assets/sola-pe-b-4.jpg.asset.json";
 import plantaPe1 from "@/assets/planta-pe-1.jpg.asset.json";
 import plantaPe2 from "@/assets/planta-pe-2.jpg.asset.json";
 import plantaPe3 from "@/assets/planta-pe-3.jpg.asset.json";
@@ -83,7 +83,7 @@ const faqs = [
   ["Como posso agendar?", "Clique em qualquer botão de WhatsApp desta página para conversar com a equipe da Clínica Domiciliar Naamã e consultar informações sobre atendimento e disponibilidade."],
 ];
 
-type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "pair-c" | "pair-d" | "tall" | "feature" | "evolution" | "wide-a" | "wide-b" | "wide-c" | "wide-d" | "wide-e" | "solo-a" | "solo-b"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; badge?: string; stages?: { label: string; src: string; after?: boolean }[] };
+type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "pair-c" | "pair-d" | "tall" | "feature" | "evolution" | "wide-a" | "wide-b" | "wide-d" | "wide-e" | "wide-f" | "solo-a" | "solo-b"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; badge?: string; stages?: { label: string; src: string; after?: boolean }[] };
 const beforeAfterCases: BeforeAfterCase[] = [
   { slot: "evolution", title: "Evolução de uma ferida no calcanhar", description: "Acompanhamento de um mesmo caso, etapa por etapa: a ferida profunda no calcanhar, com tecido desvitalizado, passou por desbridamento e curativos especializados, formou tecido de granulação e evoluiu até o fechamento, com a cicatriz no lugar da lesão. Cada etapa mostra como o cuidado contínuo faz diferença.", stages: [
     { label: "ANTES", src: ulceraCotoAntes.url },
@@ -102,12 +102,6 @@ const beforeAfterCases: BeforeAfterCase[] = [
     { label: "EVOLUÇÃO", src: feridaDorsoGranulando.url },
     { label: "EVOLUÇÃO", src: feridaDorsoFechando.url, after: true },
     { label: "DEPOIS", src: feridaDorsoCicatrizada.url, after: true },
-  ] },
-  { slot: "wide-c", title: "Evolução de uma ferida entre os dedos do pé", description: "Acompanhamento de um mesmo caso, etapa por etapa: a ferida aberta com tecido desvitalizado, a formação de tecido de granulação saudável, a redução progressiva da lesão e, por fim, a pele fechada, com a cicatriz no lugar da ferida.", stages: [
-    { label: "ANTES", src: dorsoB1.url },
-    { label: "EVOLUÇÃO", src: dorsoB2.url },
-    { label: "EVOLUÇÃO", src: dorsoB3.url, after: true },
-    { label: "DEPOIS", src: dorsoB4.url, after: true },
   ] },
   { slot: "wide-d", title: "Evolução de uma ferida na sola do pé", description: "Acompanhamento de um mesmo caso em seis etapas: a úlcera na planta do pé, a ferida ampliada após a limpeza, o preenchimento gradual por tecido de granulação, a redução até uma pequena área aberta e, por fim, a sola cicatrizada.", stages: [
     { label: "ANTES", src: plantaPe1.url },
@@ -130,6 +124,12 @@ const beforeAfterCases: BeforeAfterCase[] = [
     { label: "EVOLUÇÃO", src: calcanharEvo2.url },
     { label: "EVOLUÇÃO", src: calcanharEvo3.url, after: true },
     { label: "DEPOIS", src: calcanharEvo4.url, after: true },
+  ] },
+  { slot: "wide-f", title: "Acompanhamento de uma ferida na sola do pé", description: "Acompanhamento de um mesmo caso, etapa por etapa: a úlcera com borda endurecida, a ferida ampliada após a limpeza, a redução progressiva até uma faixa estreita de tecido de granulação e, por fim, a sola fechada, com a cicatriz no lugar da lesão.", stages: [
+    { label: "ANTES", src: solaB1.url },
+    { label: "EVOLUÇÃO", src: solaB2.url },
+    { label: "EVOLUÇÃO", src: solaB3.url, after: true },
+    { label: "DEPOIS", src: solaB4.url, after: true },
   ] },
 ];
 
