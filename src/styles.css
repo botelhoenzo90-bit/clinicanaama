@@ -820,6 +820,15 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 .ba-wide-e .ba-stages .before-after-photo{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:899/1599!important}
 @media(max-width:980px){.ba-wide-e .ba-stages{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.ba-wide-e{grid-column:1;grid-row:auto}.ba-wide-e .ba-stages{grid-template-columns:1fr 1fr}}
+
+/* Antes e depois: sola do pé, registro complementar */
+.ba-wide-f{grid-column:1/span 2;grid-row:10}
+.ba-wide-f .before-after-photo{min-height:0;aspect-ratio:899/1599}
+.ba-wide-f .before-after-card-copy p{max-width:760px}
+.ba-wide-f .ba-stages{align-items:start}
+.ba-wide-f .ba-stages .before-after-photo{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:899/1599!important}
+@media(max-width:980px){.ba-wide-f .ba-stages{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.ba-wide-f{grid-column:1;grid-row:auto}.ba-wide-f .ba-stages{grid-template-columns:1fr 1fr}}
 .team-credentials{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 10px;margin:14px 0 6px}
 .team-credentials span{display:block;color:var(--ink);font-size:14px;line-height:1.6;max-width:100%;overflow-wrap:anywhere}
 .footer-brand .team-credentials{justify-content:flex-start}
