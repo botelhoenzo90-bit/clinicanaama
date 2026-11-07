@@ -29,7 +29,7 @@ import feridaDorsoCicatrizada from "@/assets/ferida-dorso-pe-cicatrizada.jpg.ass
 import cotoLesaoExtensa from "@/assets/coto-lesao-extensa.jpg.asset.json";
 import cotoQuaseFechado from "@/assets/coto-quase-fechado.jpg.asset.json";
 import cotoGranulacao from "@/assets/coto-granulacao.jpg.asset.json";
-import cotoCavidadeProfunda from "@/assets/coto-cavidade-profunda.jpg.asset.json";
+import cotoCavidadeEtapa from "@/assets/coto-cavidade-etapa.jpg.asset.json";
 import feridaLateralAntes from "@/assets/ferida-lateral-antes.jpg.asset.json";
 import feridaLateralDepois from "@/assets/ferida-lateral-depois.jpg.asset.json";
 import calcanharEvo1 from "@/assets/calcanhar-evo-33.jpg.asset.json";
@@ -117,7 +117,7 @@ const beforeAfterCases: BeforeAfterCase[] = [
     { label: "DEPOIS", src: cotoQuaseFechado.url, after: true },
   ] },
   { slot: "pair-d", title: "Evolução de uma ferida no pé, com o dedão preservado", description: "Acompanhamento de um mesmo caso: à esquerda, a ferida aberta com tecido escuro e áreas de cicatrização; à direita, a mesma região já fechada, com a cicatriz formada e o dedão preservado.", before: feridaLateralAntes.url, after: feridaLateralDepois.url },
-  { slot: "solo-a", title: "Ferida profunda em coto de amputação", description: "Registro de uma etapa do acompanhamento: cavidade profunda com tecido desvitalizado, tratada com curativos especializados e avaliação contínua para orientar a evolução do tratamento.", single: cotoCavidadeProfunda.url, badge: "ACOMPANHAMENTO" },
+  { slot: "solo-a", title: "Ferida profunda em coto de amputação", description: "Registro de uma etapa do acompanhamento: cavidade profunda com tecido desvitalizado, tratada com curativos especializados e avaliação contínua para orientar a evolução do tratamento.", single: cotoCavidadeEtapa.url, badge: "ACOMPANHAMENTO" },
   { slot: "tall", title: "Acompanhamento de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida aberta; à direita, a mesma área com a lesão praticamente fechada.", single: cotoAmputacaoRegistro.url, aspect: "572/1024", panels: true },
   { slot: "wide-e", title: "Evolução de uma ferida profunda no calcanhar", description: "Acompanhamento de um mesmo caso, etapa por etapa: a cavidade profunda com tecido desvitalizado, a limpeza com formação de tecido de granulação saudável, a redução progressiva até uma pequena área central e, por fim, o fechamento completo, com a cicatriz no lugar da lesão.", stages: [
     { label: "ANTES", src: calcanharEvo1.url },
