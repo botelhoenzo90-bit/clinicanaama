@@ -22,3 +22,4 @@
 - [x] Remover o card "Evolução de uma ferida entre os dedos do pé" e adicionar as quatro fotos novas da sola do pé
 - [x] Trocar a foto do card "Ferida profunda em coto de amputação" pela nova, exibida inteira
 - [x] Colocar as fotos da mão e do dedo do pé em ordem de evolução e tirar as fotos repetidas
+- [x] Remover o card "Acompanhamento de uma ferida na sola do pé" e as fotos dele
