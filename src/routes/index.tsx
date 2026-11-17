@@ -13,9 +13,17 @@ import cotoGranulando from "@/assets/coto-granulando.jpg.asset.json";
 import cotoFechando from "@/assets/coto-fechando.jpg.asset.json";
 import cotoCicatrizado from "@/assets/coto-cicatrizado.jpg.asset.json";
 import solaB1 from "@/assets/sola-pe-b-1.jpg.asset.json";
-import solaB2 from "@/assets/sola-pe-b-2.jpg.asset.json";
 import solaB3 from "@/assets/sola-pe-b-3.jpg.asset.json";
 import solaB4 from "@/assets/sola-pe-b-4.jpg.asset.json";
+import mao1 from "@/assets/mao-1.jpg.asset.json";
+import mao2 from "@/assets/mao-2.jpg.asset.json";
+import mao3 from "@/assets/mao-3.jpg.asset.json";
+import mao4 from "@/assets/mao-4.jpg.asset.json";
+import dedoPe1 from "@/assets/dedo-pe-1.jpg.asset.json";
+import dedoPe2 from "@/assets/dedo-pe-2.jpg.asset.json";
+import dedoPe3 from "@/assets/dedo-pe-3.jpg.asset.json";
+import dedoPe4 from "@/assets/dedo-pe-4.jpg.asset.json";
+import dedoPe5 from "@/assets/dedo-pe-5.jpg.asset.json";
 import plantaPe1 from "@/assets/planta-pe-1.jpg.asset.json";
 import plantaPe2 from "@/assets/planta-pe-2.jpg.asset.json";
 import plantaPe3 from "@/assets/planta-pe-3.jpg.asset.json";
@@ -32,10 +40,6 @@ import cotoGranulacao from "@/assets/coto-granulacao.jpg.asset.json";
 import cotoCavidadeEtapa from "@/assets/coto-cavidade-etapa.jpg.asset.json";
 import feridaLateralAntes from "@/assets/ferida-lateral-antes.jpg.asset.json";
 import feridaLateralDepois from "@/assets/ferida-lateral-depois.jpg.asset.json";
-import calcanharEvo1 from "@/assets/calcanhar-evo-33.jpg.asset.json";
-import calcanharEvo2 from "@/assets/calcanhar-evo-34.jpg.asset.json";
-import calcanharEvo3 from "@/assets/calcanhar-evo-35.jpg.asset.json";
-import calcanharEvo4 from "@/assets/calcanhar-evo-36.jpg.asset.json";
 import fatimaCurativoEmCasa from "@/assets/fatima-curativo-em-casa.jpg.asset.json";
 import historia1 from "@/assets/historia-cuidado-1.mp4.asset.json";
 import historia2 from "@/assets/historia-cuidado-2.mp4.asset.json";
@@ -83,7 +87,7 @@ const faqs = [
   ["Como posso agendar?", "Clique em qualquer botão de WhatsApp desta página para conversar com a equipe da Clínica Domiciliar Naamã e consultar informações sobre atendimento e disponibilidade."],
 ];
 
-type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "pair-c" | "pair-d" | "tall" | "feature" | "evolution" | "wide-a" | "wide-b" | "wide-d" | "wide-e" | "wide-f" | "solo-a" | "solo-b"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; badge?: string; stages?: { label: string; src: string; after?: boolean }[] };
+type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "pair-c" | "pair-d" | "tall" | "feature" | "evolution" | "wide-a" | "wide-b" | "wide-d" | "wide-e" | "wide-f" | "wide-g" | "wide-h" | "solo-a" | "solo-b"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean; badge?: string; stages?: { label: string; src: string; after?: boolean }[] };
 const beforeAfterCases: BeforeAfterCase[] = [
   { slot: "evolution", title: "Evolução de uma ferida no calcanhar", description: "Acompanhamento de um mesmo caso, etapa por etapa: a ferida profunda no calcanhar, com tecido desvitalizado, passou por desbridamento e curativos especializados, formou tecido de granulação e evoluiu até o fechamento, com a cicatriz no lugar da lesão. Cada etapa mostra como o cuidado contínuo faz diferença.", stages: [
     { label: "ANTES", src: ulceraCotoAntes.url },
@@ -119,20 +123,25 @@ const beforeAfterCases: BeforeAfterCase[] = [
   { slot: "pair-d", title: "Evolução de uma ferida no pé, com o dedão preservado", description: "Acompanhamento de um mesmo caso: à esquerda, a ferida aberta com tecido escuro e áreas de cicatrização; à direita, a mesma região já fechada, com a cicatriz formada e o dedão preservado.", before: feridaLateralAntes.url, after: feridaLateralDepois.url },
   { slot: "solo-a", title: "Ferida profunda em coto de amputação", description: "Registro de uma etapa do acompanhamento: cavidade profunda com tecido desvitalizado, tratada com curativos especializados e avaliação contínua para orientar a evolução do tratamento.", single: cotoCavidadeEtapa.url, badge: "ACOMPANHAMENTO" },
   { slot: "tall", title: "Acompanhamento de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida aberta; à direita, a mesma área com a lesão praticamente fechada.", single: cotoAmputacaoRegistro.url, aspect: "572/1024", panels: true },
-  { slot: "wide-e", title: "Evolução de uma ferida profunda no calcanhar", description: "Acompanhamento de um mesmo caso, etapa por etapa: a cavidade profunda com tecido desvitalizado, a limpeza com formação de tecido de granulação saudável, a redução progressiva até uma pequena área central e, por fim, o fechamento completo, com a cicatriz no lugar da lesão.", stages: [
-    { label: "ANTES", src: calcanharEvo1.url },
-    { label: "EVOLUÇÃO", src: calcanharEvo2.url },
-    { label: "EVOLUÇÃO", src: calcanharEvo3.url, after: true },
-    { label: "DEPOIS", src: calcanharEvo4.url, after: true },
-  ] },
   { slot: "wide-f", title: "Acompanhamento de uma ferida na sola do pé", description: "Acompanhamento de um mesmo caso, etapa por etapa: a úlcera com borda endurecida, a ferida ampliada após a limpeza, a redução progressiva até uma faixa estreita de tecido de granulação e, por fim, a sola fechada, com a cicatriz no lugar da lesão.", stages: [
     { label: "ANTES", src: solaB1.url },
-    { label: "EVOLUÇÃO", src: solaB2.url },
     { label: "EVOLUÇÃO", src: solaB3.url, after: true },
     { label: "DEPOIS", src: solaB4.url, after: true },
   ] },
+  { slot: "wide-g", title: "Evolução de feridas na palma da mão", description: "Acompanhamento de um mesmo caso, etapa por etapa: as feridas profundas na palma, a redução das cavidades, a pele se refazendo e, por fim, a mão cicatrizada.", stages: [
+    { label: "ANTES", src: mao1.url },
+    { label: "EVOLUÇÃO", src: mao2.url },
+    { label: "EVOLUÇÃO", src: mao3.url, after: true },
+    { label: "DEPOIS", src: mao4.url, after: true },
+  ] },
+  { slot: "wide-h", title: "Evolução de uma lesão no dedo do pé", description: "Acompanhamento de um mesmo caso, etapa por etapa: o dedo com tecido escurecido, o cuidado com a área comprometida, a cicatrização do local e, por fim, o pé fechado e protegido.", stages: [
+    { label: "ANTES", src: dedoPe1.url },
+    { label: "EVOLUÇÃO", src: dedoPe2.url },
+    { label: "EVOLUÇÃO", src: dedoPe3.url, after: true },
+    { label: "EVOLUÇÃO", src: dedoPe4.url, after: true },
+    { label: "DEPOIS", src: dedoPe5.url, after: true },
+  ] },
 ];
-
 function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const goWhatsapp = (label: string) => window.open(`${WHATSAPP}?text=${encodeURIComponent(`Olá! Vim pelo site da Clínica Domiciliar Naamã e gostaria de ${label.toLowerCase()}.`)}`, "_blank", "noopener,noreferrer");
