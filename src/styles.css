@@ -822,7 +822,7 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 @media(max-width:760px){.ba-wide-e{grid-column:1;grid-row:auto}.ba-wide-e .ba-stages{grid-template-columns:1fr 1fr}}
 
 /* Antes e depois: sola do pé, registro complementar */
-.ba-wide-f{grid-column:1/span 2;grid-row:10}
+.ba-wide-f{grid-column:1/span 2;grid-row:9}
 .ba-wide-f .before-after-photo{min-height:0;aspect-ratio:899/1599}
 .ba-wide-f .before-after-card-copy p{max-width:760px}
 .ba-wide-f .ba-stages{align-items:start}
@@ -836,3 +836,13 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 .maria-site .intro-copy .team-credentials-inline{font-size:14px;font-weight:600;color:var(--gold-dark);margin:4px 0 10px}
 .maria-site .footer-grid .team-credentials span{display:block!important}
 .maria-site .footer-brand .team-credentials{flex-direction:column;gap:2px}
+
+/* Antes e depois: mão e dedo do pé — foto inteira, moldura segue a foto */
+.ba-wide-g{grid-column:1/span 2;grid-row:10}
+.ba-wide-h{grid-column:1/span 2;grid-row:11}
+.ba-wide-h .ba-stages{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+.ba-wide-g .ba-stages,.ba-wide-h .ba-stages{align-items:start}
+.ba-wide-g .ba-stages .before-after-photo,.ba-wide-h .ba-stages .before-after-photo{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:auto!important}
+.ba-wide-g .ba-stages .before-after-photo img,.ba-wide-h .ba-stages .before-after-photo img{position:static!important;width:100%!important;height:auto!important;object-fit:contain!important;display:block}
+@media(max-width:980px){.ba-wide-g .ba-stages,.ba-wide-h .ba-stages{grid-template-columns:1fr 1fr!important}}
+@media(max-width:760px){.ba-wide-g,.ba-wide-h{grid-column:1;grid-row:auto}}
